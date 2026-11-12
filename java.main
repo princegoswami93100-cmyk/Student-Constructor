@@ -1,0 +1,50 @@
+package Constructor;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Prince
+ */
+public class Student {
+    public int college_code;
+    public String course;
+    public double fees;
+    Scanner s1 = new Scanner(System.in); 
+    
+    public void get_data() {
+        college_code = s1.nextInt();
+        course = s1.nextLine();
+        fees = s1.nextDouble();
+         }
+    
+    public void display () {
+        System.out.println("college_code  : "+ college_code);
+        System.out.println("course : "+ course);
+        System.out.println("fees :" + fees );
+        }
+    public Student (int college_code , String course, double fees) {
+        this.college_code = college_code;
+        this.course = course;
+        this.fees = fees;
+    } 
+         
+}
+package Constructor;
+
+/**
+ *
+ * @author Prince
+ */
+public class Main3 {
+    public static void main(String[] args){
+       
+        
+        Student s1 = new Student(3011, "bca" , 25000);
+        s1.display();
+       
+       
+    }
+    
+}
+
+
